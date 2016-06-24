@@ -193,6 +193,11 @@ public final class WrongTimberUsageDetector extends Detector implements Detector
           case 'x':
           case 'X':
           case 'd':
+            valid = type == Integer.TYPE
+                || type == Long.TYPE
+                || type == Byte.TYPE
+                || type == Short.TYPE;
+            break;
           case 'o':
           case 'e':
           case 'E':
